@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +7,87 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="bg-zinc-950 text-white">
-  <!-- Paste the exact same <nav> block from gallery.html here -->
+<body class="bg-zinc-950 text-white font-sans">
 
-  <section class="hero-bg h-screen flex items-center justify-center text-center" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('images/car-hero.jpg');">
-    <div class="max-w-4xl px-6">
-      <h1 class="text-7xl md:text-8xl font-black tracking-tighter">PHLIPOT RACING</h1>
-      <p class="text-4xl text-red-500 mt-4">Weasel Phlipot • #52 • Garke Racing</p>
-      <a href="gallery.html" class="mt-12 inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-full text-2xl font-bold">View Gallery</a>
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-2xl font-black">P</div>
+        <h1 class="text-2xl font-black tracking-tighter">PHLIPOT RACING</h1>
+      </div>
+      <div class="hidden md:flex gap-8 text-lg font-medium">
+        <a href="index.html" class="text-red-500 font-semibold">Home</a>
+        <a href="about.html" class="hover:text-red-500">About</a>
+        <a href="schedule.html" class="hover:text-red-500">Schedule</a>
+        <a href="sponsors.html" class="hover:text-red-500">Sponsors</a>
+        <a href="gallery.html" class="hover:text-red-500">Gallery</a>
+        <a href="news.html" class="hover:text-red-500">News</a>
+        <a href="contact.html" class="hover:text-red-500">Contact</a>
+      </div>
+      <button onclick="toggleMobileMenu()" class="md:hidden text-3xl"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero Section with your cover photo -->
+  <section class="h-screen bg-cover bg-center flex items-center justify-center relative" 
+           style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('images/weasel/cover_photo.jpg');">
+    <div class="max-w-5xl mx-auto px-6 text-center z-10">
+      <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-4">PHLIPOT RACING</h1>
+      <p class="text-3xl md:text-5xl text-red-500 font-bold mb-6">Weasel Phlipot • #52</p>
+      <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-12">UMP Modified Dirt Track Racing • Chasing Checkered Flags Across the Midwest</p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="gallery.html" 
+           class="px-10 py-5 bg-red-600 hover:bg-red-700 rounded-full text-xl font-semibold transition">
+          View Gallery
+        </a>
+        <a href="schedule.html" 
+           class="px-10 py-5 border-2 border-white hover:bg-white hover:text-black rounded-full text-xl font-semibold transition">
+          See Schedule
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Quick links to other pages -->
-  <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-    <a href="about.html" class="block bg-zinc-900 hover:bg-zinc-800 p-10 rounded-3xl text-2xl font-semibold">About the Team</a>
-    <a href="schedule.html" class="block bg-zinc-900 hover:bg-zinc-800 p-10 rounded-3xl text-2xl font-semibold">Schedule</a>
-    <a href="sponsors.html" class="block bg-zinc-900 hover:bg-zinc-800 p-10 rounded-3xl text-2xl font-semibold">Sponsors</a>
-    <a href="news.html" class="block bg-zinc-900 hover:bg-zinc-800 p-10 rounded-3xl text-2xl font-semibold">Latest News</a>
-  </div>
+  <!-- Quick Profile / About Teaser -->
+  <section class="py-20 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="images/weasel/weasel_by_car.jpg" 
+               alt="Weasel Phlipot" 
+               class="rounded-3xl w-full shadow-2xl">
+        </div>
+        <div>
+          <h2 class="text-4xl font-bold mb-6">Meet Weasel Phlipot</h2>
+          <p class="text-lg text-zinc-300 leading-relaxed mb-8">
+            Veteran driver Weasel Phlipot brings years of experience and passion to the UMP Modified division. 
+            Known for hard racing and a competitive spirit, he's a fan favorite at tracks across the region.
+          </p>
+          <a href="about.html" 
+             class="inline-block px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold">
+            Learn More About the Team →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="py-20 bg-black">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <a href="schedule.html" class="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl text-xl font-semibold transition">Schedule</a>
+      <a href="sponsors.html" class="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl text-xl font-semibold transition">Sponsors</a>
+      <a href="gallery.html" class="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl text-xl font-semibold transition">Photo Gallery</a>
+      <a href="contact.html" class="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl text-xl font-semibold transition">Contact Us</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleMobileMenu() {
+      alert("Mobile menu coming soon");
+    }
+  </script>
 </body>
 </html>
