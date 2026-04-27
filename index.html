@@ -1,182 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phlipot Racing | UMP Modified Dirt Track Racing</title>
+  <title>Phlipot Racing | UMP Modified Dirt Track</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    .hero-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x1080/111827/ef4444?text=PHLIPOT+RACING+CAR');
-      background-size: cover;
-      background-position: center;
-    }
-    .nav-link {
-      transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      color: #ef4444;
-      transform: translateY(-2px);
-    }
-  </style>
 </head>
-<body class="bg-zinc-950 text-white font-sans">
+<body class="bg-zinc-950 text-white">
+  <!-- Paste the exact same <nav> block from gallery.html here -->
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-zinc-800">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-xl font-bold">P</div>
-        <h1 class="text-2xl font-black tracking-tighter">PHLIPOT RACING</h1>
-      </div>
-      
-      <div class="hidden md:flex gap-8 text-lg">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#schedule" class="nav-link">Schedule</a>
-        <a href="#sponsors" class="nav-link">Sponsors</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#news" class="nav-link">News</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-      
-      <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-zinc-900 py-6 border-t border-zinc-800">
-      <div class="flex flex-col items-center gap-6 text-xl">
-        <a href="#about" onclick="toggleMobileMenu()" class="nav-link">About</a>
-        <a href="#schedule" onclick="toggleMobileMenu()" class="nav-link">Schedule</a>
-        <a href="#sponsors" onclick="toggleMobileMenu()" class="nav-link">Sponsors</a>
-        <a href="#gallery" onclick="toggleMobileMenu()" class="nav-link">Gallery</a>
-        <a href="#news" onclick="toggleMobileMenu()" class="nav-link">News</a>
-        <a href="#contact" onclick="toggleMobileMenu()" class="nav-link">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-bg h-screen flex items-center justify-center text-center pt-16">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-4">WEASEL PHLIPOT</h2>
-      <p class="text-3xl md:text-5xl text-red-500 font-bold mb-8">Garke Racing • UMP Modified</p>
-      <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-12">Chasing checkered flags on dirt ovals across the Midwest.</p>
-      <div class="flex gap-6 justify-center">
-        <a href="#schedule" class="px-10 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold transition">Next Race</a>
-        <a href="#gallery" class="px-10 py-4 border-2 border-white hover:bg-white hover:text-black rounded-full text-lg font-semibold transition">Watch Highlights</a>
-      </div>
+  <section class="hero-bg h-screen flex items-center justify-center text-center" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('images/car-hero.jpg');">
+    <div class="max-w-4xl px-6">
+      <h1 class="text-7xl md:text-8xl font-black tracking-tighter">PHLIPOT RACING</h1>
+      <p class="text-4xl text-red-500 mt-4">Weasel Phlipot • #52 • Garke Racing</p>
+      <a href="gallery.html" class="mt-12 inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-full text-2xl font-bold">View Gallery</a>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-24 bg-zinc-900">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-5xl font-bold mb-8">About Team Phlipot Racing</h2>
-        <p class="text-lg text-zinc-300 leading-relaxed mb-6">
-          Weasel Phlipot and the Garke Racing team bring high-octane UMP Modified dirt track racing to tracks across the region. With a passion for competition and a commitment to excellence, we're always pushing for that next checkered flag.
-        </p>
-        <p class="text-lg text-zinc-300 leading-relaxed">
-          Follow us for race updates, behind-the-scenes content, and all the dirt-slinging action.
-        </p>
-      </div>
-      <div class="bg-zinc-800 p-8 rounded-3xl">
-        <img src="https://via.placeholder.com/800x600/27272a/ef4444?text=DRIVER+PHOTO" alt="Weasel Phlipot" class="rounded-2xl w-full">
-        <p class="text-center mt-4 text-zinc-400">Weasel Phlipot • #52</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Next Race / Schedule -->
-  <section id="schedule" class="py-24 bg-black">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold mb-4">Next Race</h2>
-      <div class="inline-block bg-zinc-900 border border-red-600 rounded-3xl px-12 py-10 mt-8">
-        <p class="text-red-500 text-sm tracking-widest">UPCOMING</p>
-        <p class="text-4xl font-bold mt-2">TO BE DETERMINED</p>
-        <p class="text-xl text-zinc-400 mt-4">Check back soon or follow us on social media for updates!</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sponsors -->
-  <section id="sponsors" class="py-24 bg-zinc-900">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-5xl font-bold text-center mb-12">Our Sponsors</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <!-- Replace these with real sponsor logos -->
-        <div class="bg-zinc-800 p-8 rounded-2xl text-center hover:scale-105 transition">Sponsor 1 Logo</div>
-        <div class="bg-zinc-800 p-8 rounded-2xl text-center hover:scale-105 transition">Sponsor 2 Logo</div>
-        <div class="bg-zinc-800 p-8 rounded-2xl text-center hover:scale-105 transition">Sponsor 3 Logo</div>
-        <div class="bg-zinc-800 p-8 rounded-2xl text-center hover:scale-105 transition">Sponsor 4 Logo</div>
-      </div>
-      <p class="text-center text-zinc-400 mt-12">Thank you to all our partners for making this season possible!</p>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" class="py-24 bg-black">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-5xl font-bold text-center mb-12">Gallery</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <img src="https://via.placeholder.com/600x400/27272a/ef4444?text=RACE+ACTION+1" class="rounded-3xl hover:scale-105 transition" alt="Race Action">
-        <img src="https://via.placeholder.com/600x400/27272a/ef4444?text=RACE+ACTION+2" class="rounded-3xl hover:scale-105 transition" alt="Race Action">
-        <img src="https://via.placeholder.com/600x400/27272a/ef4444?text=CAR+IN+PITS" class="rounded-3xl hover:scale-105 transition" alt="In the Pits">
-      </div>
-    </div>
-  </section>
-
-  <!-- News -->
-  <section id="news" class="py-24 bg-zinc-900">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-5xl font-bold text-center mb-12">Latest News</h2>
-      <div class="space-y-8">
-        <div class="bg-zinc-800 p-8 rounded-3xl">
-          <p class="text-red-500 text-sm">April 2026</p>
-          <h3 class="text-2xl font-semibold mt-2">Season Kickoff Underway</h3>
-          <p class="text-zinc-400 mt-3">We're gearing up for another exciting year of UMP Modified racing. Stay tuned for the full schedule!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-24 bg-black">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold mb-8">Get In Touch</h2>
-      <p class="text-xl text-zinc-400 mb-12">Follow the action or reach out to the team</p>
-      
-      <div class="flex flex-wrap justify-center gap-8 text-4xl mb-12">
-        <a href="https://facebook.com/weaselphlipotgarkeracing" target="_blank" class="hover:text-red-500 transition"><i class="fab fa-facebook"></i></a>
-        <a href="https://x.com/weaselphlipot52" target="_blank" class="hover:text-red-500 transition"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" class="hover:text-red-500 transition"><i class="fab fa-instagram"></i></a>
-      </div>
-      
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="max-w-md mx-auto space-y-6">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full px-6 py-4 bg-zinc-900 border border-zinc-700 rounded-2xl focus:outline-none focus:border-red-600">
-        <input type="email" name="email" placeholder="Your Email" required class="w-full px-6 py-4 bg-zinc-900 border border-zinc-700 rounded-2xl focus:outline-none focus:border-red-600">
-        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full px-6 py-4 bg-zinc-900 border border-zinc-700 rounded-2xl focus:outline-none focus:border-red-600"></textarea>
-        <button type="submit" class="w-full py-5 bg-red-600 hover:bg-red-700 rounded-2xl text-lg font-semibold">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-black py-12 border-t border-zinc-800 text-center text-zinc-500">
-    <p>&copy; 2026 Phlipot Racing • Garke Racing Team</p>
-    <p class="mt-2">All Rights Reserved</p>
-  </footer>
-
-  <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
-    }
-    
-    // Tailwind script already loaded via CDN
-  </script>
+  <!-- Quick links to other pages -->
+  <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <a href="about.html" class="block bg-zinc-900 hover:bg-zinc-800 p-10 rounded-3xl text-2xl font-semibold">About the Team</a>
+    <a href="schedule.html" class="block bg-zinc-900 hover:bg-zinc-800 p-10 rounded-3xl text-2xl font-semibold">Schedule</a>
+    <a href="sponsors.html" class="block bg-zinc-900 hover:bg-zinc-800 p-10 rounded-3xl text-2xl font-semibold">Sponsors</a>
+    <a href="news.html" class="block bg-zinc-900 hover:bg-zinc-800 p-10 rounded-3xl text-2xl font-semibold">Latest News</a>
+  </div>
 </body>
 </html>
