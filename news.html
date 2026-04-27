@@ -1,4 +1,15 @@
-  <!-- NAV (copy this to every page) -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | Phlipot Racing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-zinc-950 text-white font-sans">
+
+  <!-- NAV -->
   <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
@@ -10,11 +21,30 @@
         <a href="about.html" class="hover:text-red-500">About</a>
         <a href="schedule.html" class="hover:text-red-500">Schedule</a>
         <a href="sponsors.html" class="hover:text-red-500">Sponsors</a>
-        <a href="gallery.html" class="text-red-500 font-semibold">Gallery</a>
-        <a href="news.html" class="hover:text-red-500">News</a>
+        <a href="gallery.html" class="hover:text-red-500">Gallery</a>
+        <a href="news.html" class="text-red-500 font-semibold">News</a>
         <a href="contact.html" class="hover:text-red-500">Contact</a>
       </div>
       <button onclick="toggleMobileMenu()" class="md:hidden text-3xl"><i class="fas fa-bars"></i></button>
     </div>
   </nav>
 
+  <div class="pt-24 max-w-4xl mx-auto px-6">
+    <h1 class="text-5xl font-black text-center mb-12">Latest News</h1>
+    
+    <div class="space-y-10">
+      <div class="bg-zinc-900 p-8 rounded-3xl">
+        <p class="text-red-500 text-sm">April 27, 2026</p>
+        <h3 class="text-2xl font-semibold mt-3">2026 Season Is Here</h3>
+        <p class="text-zinc-400 mt-4">Team Phlipot Racing is geared up and ready for another exciting year on the dirt.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      alert("Mobile menu coming soon");
+    }
+  </script>
+</body>
+</html>
