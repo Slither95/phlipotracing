@@ -9,13 +9,15 @@
 </head>
 <body class="bg-zinc-950 text-white font-sans">
 
-  <!-- NAV - Updated as requested -->
+  <!-- NAV with Working Mobile Menu -->
   <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-2xl font-black">P</div>
         <h1 class="text-xl md:text-2xl font-black tracking-tighter">WEASEL PHLIPOT / GARKE RACING</h1>
       </div>
+
+      <!-- Desktop Menu -->
       <div class="hidden md:flex gap-8 text-lg font-medium">
         <a href="index.html" class="text-red-500 font-semibold">Home</a>
         <a href="about.html" class="hover:text-red-500">About</a>
@@ -25,12 +27,29 @@
         <a href="news.html" class="hover:text-red-500">News</a>
         <a href="contact.html" class="hover:text-red-500">Contact</a>
       </div>
-      <button onclick="toggleMobileMenu()" class="md:hidden text-3xl"><i class="fas fa-bars"></i></button>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="md:hidden text-3xl p-2">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-8">
+      <div class="flex flex-col items-center gap-8 text-xl">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="schedule.html" class="mobile-link">Schedule</a>
+        <a href="sponsors.html" class="mobile-link">Sponsors</a>
+        <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="news.html" class="mobile-link">News</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="h-screen bg-cover bg-center flex items-center justify-center relative" 
+  <!-- Rest of your homepage content -->
+  <section class="h-screen bg-cover bg-center flex items-center justify-center relative pt-16" 
            style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('images/weasel/cover_photo.jpg');">
     <div class="max-w-5xl mx-auto px-6 text-center z-10">
       <h1 class="text-6xl md:text-7xl font-black tracking-tighter mb-4">WEASEL PHLIPOT</h1>
@@ -38,51 +57,52 @@
       <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-12">UMP Modified Dirt Track Racing • #52</p>
       
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="gallery.html" class="px-10 py-5 bg-red-600 hover:bg-red-700 rounded-full text-xl font-semibold transition">
-          View Gallery
-        </a>
-        <a href="schedule.html" class="px-10 py-5 border-2 border-white hover:bg-white hover:text-black rounded-full text-xl font-semibold transition">
-          2026 Schedule
-        </a>
+        <a href="gallery.html" class="px-10 py-5 bg-red-600 hover:bg-red-700 rounded-full text-xl font-semibold transition">View Gallery</a>
+        <a href="schedule.html" class="px-10 py-5 border-2 border-white hover:bg-white hover:text-black rounded-full text-xl font-semibold transition">2026 Schedule</a>
       </div>
     </div>
   </section>
 
-  <!-- Quick Profile Teaser -->
+  <!-- Other sections (kept short) -->
   <section class="py-20 bg-zinc-900">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <img src="images/weasel/weasel_by_car.jpg" alt="Weasel Phlipot" class="rounded-3xl w-full shadow-2xl">
-        </div>
+        <div><img src="images/weasel/weasel_by_car.jpg" alt="Weasel Phlipot" class="rounded-3xl w-full shadow-2xl"></div>
         <div>
           <h2 class="text-4xl font-bold mb-6">Meet Weasel Phlipot</h2>
-          <p class="text-lg text-zinc-300 leading-relaxed mb-8">
-            Veteran UMP Modified driver Weasel Phlipot and the Garke Racing team bring speed, 
-            experience, and excitement to dirt tracks across the Midwest.
-          </p>
-          <a href="about.html" class="inline-block px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold">
-            Learn More About the Team →
-          </a>
+          <p class="text-lg text-zinc-300 leading-relaxed">Veteran UMP Modified driver Weasel Phlipot and the Garke Racing team bring speed and excitement to the dirt.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Quick Links -->
-  <section class="py-20 bg-black">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <a href="schedule.html" class="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl text-xl font-semibold transition">Schedule</a>
-      <a href="sponsors.html" class="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl text-xl font-semibold transition">Sponsors</a>
-      <a href="gallery.html" class="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl text-xl font-semibold transition">Photo Gallery</a>
-      <a href="contact.html" class="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl text-xl font-semibold transition">Contact Us</a>
     </div>
   </section>
 
   <script>
-    function toggleMobileMenu() {
-      alert("Mobile menu coming soon");
-    }
+    // Mobile Menu Script
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      
+      const icon = hamburger.querySelector('i');
+      if (icon.classList.contains('fa-bars')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = hamburger.querySelector('i');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      });
+    });
   </script>
 </body>
 </html>
