@@ -20,24 +20,49 @@
       transform: translateY(-12px) scale(1.03);
       box-shadow: 0 30px 60px -12px rgb(234 179 8);
     }
+
+    /* Golden Drapes */
+    .sponsor-frame::before,
+    .sponsor-frame::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 35px;
+      background: linear-gradient(transparent, #fbbf24, #d97706, #fbbf24, transparent);
+      opacity: 0.75;
+      z-index: 1;
+      box-shadow: inset 8px 0 15px rgba(0,0,0,0.6);
+    }
+    .sponsor-frame::before {
+      left: 0;
+      border-radius: 50% 20% 20% 50%;
+      transform: skew(12deg);
+    }
+    .sponsor-frame::after {
+      right: 0;
+      border-radius: 20% 50% 50% 20%;
+      transform: skew(-12deg);
+    }
+
     .gold-oval {
       background: linear-gradient(90deg, #ca8a04, #fbbf24, #ca8a04);
       color: #451a03;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
       font-weight: 900;
       letter-spacing: 2px;
     }
     .sponsor-name {
-      font-size: 1.8rem;
-      line-height: 1.1;
+      font-size: 1.85rem;
+      line-height: 1.05;
       font-weight: 900;
-      text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.85);
     }
   </style>
 </head>
 <body class="bg-zinc-950 text-white font-sans">
 
-  <!-- NAV (same as before) -->
+  <!-- NAV -->
   <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
@@ -81,6 +106,7 @@
   </div>
 
   <script>
+    // Same loading script as before
     const repoOwner = "Slither95";
     const repoName = "phlipotracing";
     const sponsorsFolder = "images/sponsors";
@@ -117,15 +143,15 @@
           div.className = 'sponsor-frame rounded-3xl overflow-hidden';
           div.innerHTML = `
             <div class="aspect-[5/4] flex items-center justify-center p-8 bg-gradient-to-br from-zinc-900 to-black relative">
-              <div class="text-center w-full px-6">
-                <div class="sponsor-name text-amber-200 leading-tight">
+              <div class="text-center w-full px-8 z-10">
+                <div class="sponsor-name text-amber-100 leading-tight">
                   ${displayName}
                 </div>
               </div>
             </div>
             <!-- Golden Oval -->
-            <div class="gold-oval mx-auto -mt-6 relative z-10 w-48 h-20 flex items-center justify-center rounded-full border-4 border-amber-300 shadow-xl">
-              <span class="text-xl font-black tracking-widest">SPONSOR</span>
+            <div class="gold-oval mx-auto -mt-6 relative z-20 w-52 h-20 flex items-center justify-center rounded-full border-4 border-amber-300 shadow-2xl">
+              <span class="text-2xl font-black tracking-widest">SPONSOR</span>
             </div>
           `;
           container.appendChild(div);
@@ -138,7 +164,7 @@
 
     window.onload = loadSponsors;
 
-    // Mobile Menu (same as before)
+    // Mobile Menu
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
